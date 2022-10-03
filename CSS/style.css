@@ -1,0 +1,90 @@
+
+body {
+    background: #fbfaff;
+}
+
+.navbar-top{
+    border-radius: 5px;
+    margin-left: 25%;
+    margin-right: 10%;
+    margin-top: 3%;
+}
+
+
+.my-info{
+    padding-left: 6px;
+    padding-top: 6px;
+    font-size: 18px;
+    font-family: 'Public Sans', sans-serif;
+    border-radius: 5px;
+    margin-left: 25%;
+    margin-right: 10%;
+}
+
+.nav-item{
+    font-size: 25px;
+    margin-right: 30px;
+}
+.display-5{
+    padding-top:30px;
+    padding-left: 6px;
+}
+
+.display-6{
+    padding-top: 30px;
+}
+
+.college-link{
+    color: rgba(41, 41, 50, 0.7);
+    text-decoration: none;
+}
+.college-link:hover{
+    text-decoration: underline;
+    color: rgb(34, 37, 45);
+}
+
+.footer{
+    margin-top: 50px;
+    height: 100px;
+    width: 100%;
+    background-color: rgba(196, 196, 196, 0.75);
+}
+
+li{
+    padding: 3px;
+}
+h1{
+    color: black;
+}
+
+.profile-pic:hover {
+    background: linear-gradient(
+            45deg,
+            rgba(29, 236, 197, 0.5),
+            rgba(91, 14, 214, 0.5) 100%
+    );
+}
+
+.profile-pic {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    margin-left: 50px;
+    margin-top: 1px;
+
+}
+
+.profile{
+    float: left;
+}
+
+.contact-me {
+    margin-left: 30%;
+    margin-top: 10%;
+}
+
+.icon {
+    padding: 5px
+}
+
+
