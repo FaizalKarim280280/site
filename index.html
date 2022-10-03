@@ -15,7 +15,8 @@
 </head>
 
 <body>
-        <div class="navbar-top img-fluid">
+
+    <div class="navbar-top">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position: fixed; top: 0; width:100%">
             <button class="navbar-toggler" data-bs-toggle="collapse" type="button"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
@@ -24,64 +25,66 @@
 
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link active" style="margin-left: 400px" href="#">Home</a>
-                    <a class="nav-item nav-link" style="margin-left: 200px" href="#Project">Projects</a>
-                    <a class="nav-item nav-link" style="margin-left: 200px" href="#">Contact</a>
+                    <a class="nav-item nav-link active" style="margin-left: 300px" href="#">Home</a>
+                    <a class="nav-item nav-link" style="margin-left: 300px" href="#Project">Projects</a>
+                    <a class="nav-item nav-link" style="margin-left: 300px" href="#Contact">Contact</a>
                 </div>
             </div>
         </nav>
 
     </div>
 
-    <div class = "intro">
-        <h1 class = "display-5" style="margin-left: 25%; margin-right: 10%; margin-top: 80px">About Me</h1>
-        <hr style="margin-left: 25%; margin-right: 10%">
+    <div class = "my-info" style="margin-top: 50px;">
+        <h1 class = "display-5">About Me</h1>
+        <hr style="margin-right: 10%">
 
-        <div class = "profile">
-            <img class ="profile-pic" src="Images/me3.jpg" alt="Profile Pic">
-            <div class="contact-me">
-                <a class="contact-links" href="mailto: md.faizal@research.iiit.ac.in" target="_blank"><i class="fa-light fa-solid fa-envelope fa-2xl icon"></i></a>
-                <a class="contact-links" href="https://www.facebook.com/faizal.karim.1253/" target="_blank"><i class="fa-brands fa-facebook fa-2xl icon"></i></a>
-                <a class="contact-links" href="https://www.linkedin.com/in/md-faizal-karim-720160217/" target="_blank"><i class="fa-brands fa-linkedin fa-2xl icon"></i></a>
-                <a class="contact-links" href="https://github.com/FaizalKarim280280" target="_blank"><i class="fa-brands fa-github fa-2xl icon"></i></a>
+        <div class="row" style="margin-left: -35%">
+            <div class = "profile col-sm-auto">
+                <img class ="profile-pic img-fluid" src="Images/me3.jpg" alt="Profile Pic">
+                <div class="contact-me">
+                    <a class="contact-links" href="mailto: md.faizal@research.iiit.ac.in" target="_blank"><i class="fa-light fa-solid fa-envelope fa-2xl icon"></i></a>
+                    <a class="contact-links" href="https://www.facebook.com/faizal.karim.1253/" target="_blank"><i class="fa-brands fa-facebook fa-2xl icon"></i></a>
+                    <a class="contact-links" href="https://www.linkedin.com/in/md-faizal-karim-720160217/" target="_blank"><i class="fa-brands fa-linkedin fa-2xl icon"></i></a>
+                    <a class="contact-links" href="https://github.com/FaizalKarim280280" target="_blank"><i class="fa-brands fa-github fa-2xl icon"></i></a>
+                </div>
+
             </div>
 
+            <div class="col" style="padding-left: 50px">
+                <p style="padding-top: 20px; text-align: justify"> Hi! I am <strong>Md Faizal Karim. </strong></p>
+
+                <p style = "text-align: justify">I am a 2nd year Computer Science and Engineering student studying at
+                    <u><a class = "college-link" target="_blank" href ="https://www.iiit.ac.in/">International Institute of Information Technology, Hyderabad.</a></u>
+                </p>
+
+                <p style="text-align: justify">I am interested in Deep Learning, Robotics and Creative coding. I also have some experience working with Unity for Game Development.</p>
+
+                <p style="text-align: justify">One of the things that fascinates me a lot is Space Exploration and Aviation.
+                        Recent developments in space exploration motivates me to do something better and contribute to
+                    the world.
+                </p>
+            </div>
         </div>
-
-
-        <p class = "my-info" style="padding-top: 20px" > Hi! I am <strong>Md Faizal Karim. </strong></p>
-
-        <p class="my-info">I am a 2nd year Computer Science and Engineering student studying at
-            <u><a class = "college-link" target="_blank" href ="https://www.iiit.ac.in/">International Institute of Information Technology, Hyderabad.</a></u>
-        </p>
-
-        <p class = "my-info">I am interested in Deep Learning, Robotics and Creative coding. I also have some experience working with Unity for Game Development.</p>
-
-        <p class = "my-info">One of the things that fascinates me a lot is Space Exploration and Aviation.
-                Recent developments in space exploration motivates me to do something better and contribute to
-            the world.
-        </p>
-
     </div>
 
     <div class="my-info" id="Project">
         <h1 class = "display-5" style="margin-right: 10%">Projects</h1>
-        <hr style="margin-right: 10%">
+        <hr>
 
-
-        <div class="project row">
+        <div class="project row" style="margin-top: 20px">
 
             <h4><a class="project-link" href="https://github.com/FaizalKarim280280/Roadment" target="_blank">RoadMent</a></h4>
             <div class="col-sm-auto">
-                <img class="project-pics img-fluid" src="Images/pred.jpg" alt="RoadMent image">
+                <img class="img-fluid project-pics" src="Images/rs.gif" alt="RoadMent image">
             </div>
 
-            <div class="col">
+            <div class="col" style="margin-top: 10px">
                 <p class="project-desc" style="text-align: justify"> <b>RoadMent</b> is an end-to-end platform for segmentation of roads from satellite images.
                     This is a project based on segmenting out roads from satellite images. We have used the U-Net architecture for the model,
                     coupled with dice coefficient loss for loss function and IoU score and dice coefficient as metrics.
-                    <br/>After model training, we got a training IoU score of 0.497 and a validation IoU score of 0.415.
-                    Finally, the model was integrated on a website using the Flask API.
+                    <br/><br/>After model training, we got a training IoU score of 0.497 and a validation IoU score of 0.415.
+                    Finally, the model was integrated on a website using the Flask API. <br/>
+                    <a href="https://github.com/FaizalKarim280280/Roadment"><b>[Code]</b></a>
                 </p>
             </div>
         </div>
@@ -90,14 +93,15 @@
 
             <h4><a class="project-link" href="https://github.com/FaizalKarim280280/Clean-Dirty-Road-Classifier" target="_blank">Clean/Dirty Road Classification</a></h4>
             <div class="col-sm-auto">
-                <img class="project-pics img-fluid" src="Images/prediction_result.png" alt="RoadMent image" style="height: 180px">
+                <img class="project-pics img-fluid" src="Images/clean_results.gif" alt="RoadMent image" style="height: 240px">
             </div>
 
-            <div class="col">
+            <div class="col" style="margin-top: 10px">
                 <p class="project-desc" style="text-align: justify">This is a project based on ConvNets used to identify whether a road is clean or dirty.
                     We have used <b>MobileNet</b> as our base architecture and the weights are based on imagenet. We have used web scraping techniques
                     to download 238 images of both clean and dirty roads.
-                    <br/>We achieved a training accuracy of 97.1% and validation accuracy of 91.6%.
+                    <br/><br/>We achieved a training accuracy of 97.1% and validation accuracy of 91.6%. <br/>
+                    <a href="https://github.com/FaizalKarim280280/Clean-Dirty-Road-Classifier"><b>[Code]</b></a>
                 </p>
             </div>
         </div>
@@ -106,28 +110,32 @@
 
             <h4><a class="project-link" href="https://github.com/FaizalKarim280280/Clean-Dirty-Road-Classifier" target="_blank">Flood Segmentation</a></h4>
             <div class="col-sm-auto">
-                <img class="project-pics img-fluid" src="Images/flood_pred.gif" alt="RoadMent image" style="height: 200px; width: 250px">
+                <img class="project-pics img-fluid" src="Images/flood_pred.gif" alt="RoadMent image" style ="width: 230px">
             </div>
 
-            <div class="col-sm-auto">
-                <img class="project-pics img-fluid" src="Images/pred2.jpg" alt="RoadMent image" style="height: 200px; width: 250px">
-            </div>
-
-            <div class="col">
-                <p class="project-desc" style="text-align: justify">This is a project based on ConvNets used to identify whether a road is clean or dirty.
-                    We have used <b>MobileNet</b> as our base architecture and the weights are based on imagenet.
-                    We have used web scraping techniques to download 238 images of both clean and dirty roads.
-                    <br/>We achieved a training accuracy of 97.1% and validation accuracy of 91.6%.
+            <div class="col" style="margin-top: 10px">
+                <p class="project-desc" style="text-align: justify">The aim of this project was to build a deep learning model which will identify and segment flooded areas in aerial images.
+                    For this project, we have built our own custom dataset from Google Images. The dataset contains 290 aerial images of several flooded and their respective masks.
+                    Both the masks and the images are 224x224 in resolution and are present in .png format.
+                    <br/><br/>After training for 15 epochs, we obtained a training iou score of 0.7991 and validation iou score of 0.7103. <br/>
+                    <a href="https://github.com/FaizalKarim280280/Clean-Dirty-Road-Classifier"><b>[Code]</b></a>
                 </p>
             </div>
         </div>
+    </div>
 
+    <div class="my-info" id="Contact">
+        <h1 class = "display-5" style="margin-right: 10%">Contact</h1>
+        <hr>
+        <p> Email: md.faizal@research.iiit.ac.in <br/>
+            Address: IIIT Hyderabad, Gachibowli, Hyderabad, Telangana - 500032.
+        </p>
 
     </div>
 
-    <div style="margin-bottom: 100px">
 
-    </div>
+
+    <div style="margin-bottom: 50px"> </div>
 
 
 </body>
