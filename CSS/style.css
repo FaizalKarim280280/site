@@ -42,12 +42,12 @@ body {
     color: rgb(34, 37, 45);
 }
 
-.footer{
+/* .footer{
     margin-top: 50px;
     height: 100px;
     width: 100%;
     background-color: rgba(196, 196, 196, 0.75);
-}
+} */
 
 li{
     padding: 3px;
@@ -101,3 +101,10 @@ h1{
     margin-right: 20%;
 }
 
+.footer {
+    margin-top: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 15px;
+}
