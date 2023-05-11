@@ -1,7 +1,8 @@
 
-body {
+/* body {
     background: #fbfaff;
-}
+} */
+
 
 .navbar-top{
     border-radius: 5px;
@@ -56,12 +57,14 @@ h1{
     color: black;
 }
 
+.edu-pic{
+    width: 150px;
+    height: 1500px;
+}
+
 .profile-pic {
-    width: 270px;
-    height: 260px;
-    border-radius: 7%;
-    margin-top: 20px;
-    margin-right: 5px;
+    width: 70%;
+    height: 70%;
 }
 
 .profile{

@@ -1,104 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Faizal Karim</title>
-    <link rel = "icon" href = "Images/falcon_heavy.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@200&display=swap" rel="stylesheet">
+    <link rel="icon" href="Images/falcon_heavy.png">
+    <link rel="stylesheet" href="CSS/style.css">
 
-    <link rel = "stylesheet" href = "CSS/style.css">
-    <script src="https://kit.fontawesome.com/3c293f0b4b.js" crossorigin="anonymous"></script>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.0/mdb.min.css" rel="stylesheet" />
 
 </head>
 
 <body>
 
-    <div class="navbar-top">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position: fixed; top: 0; width:100%">
-            <button class="navbar-toggler" data-bs-toggle="collapse" type="button"
-                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
 
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link active" style="margin-left: 300px" href="#">Home</a>
-                    <a class="nav-item nav-link" style="margin-left: 300px" href="#Project">Projects</a>
-                    <a class="nav-item nav-link" style="margin-left: 300px" href="#Contact">Contact</a>
-                </div>
-            </div>
-        </nav>
-
-    </div>
-
-    <div class = "my-info" style="margin-top: 55px;">
-        <h1 class = "display-5">About Me</h1>
+    <div class="container container-fluid px-4">
+        <h1 class="display-5 fw-bold">About Me</h1>
         <hr>
+
 
         <div class="row">
-            <div class = "profile col-sm-auto">
-                <img class ="profile-pic img-fluid" src="Images/me3.jpg" alt="Profile Pic">
-                <div class="contact-me">
-                    <a class="contact-links" href="mailto: md.faizal@research.iiit.ac.in" target="_blank"><i class="fa-light fa-solid fa-envelope fa-2xl icon"></i></a>
-                    <a class="contact-links" href="https://www.facebook.com/faizal.karim.1253/" target="_blank"><i class="fa-brands fa-facebook fa-2xl icon"></i></a>
-                    <a class="contact-links" href="https://www.linkedin.com/in/md-faizal-karim-720160217/" target="_blank"><i class="fa-brands fa-linkedin fa-2xl icon"></i></a>
-                    <a class="contact-links" href="https://github.com/FaizalKarim280280" target="_blank"><i class="fa-brands fa-github fa-2xl icon"></i></a>
-                    <a class="contact-links" href="https://drive.google.com/drive/u/1/folders/1Z1svz05l6qJjuqTO9Fe0Eg7YTCFEeG0H" target="_blank"><i class="fa-solid fa-file fa-2xl icon"></i></a>
+            <div class="col-md-4 mt-4">
+                <div class="text-center">
+                    <img class="profile-pic img-fluid rounded-3" src="Images/me3.jpg" alt="Profile Pic">
+                </div>
+
+                <div class="text-center mt-3">
+                    <a class="contact-links" href="mailto: md.faizal@research.iiit.ac.in" target="_blank"><i
+                            class="fa-light fa-solid fa-envelope fa-xl icon"></i></a>
+                    <a class="contact-links" href="https://www.facebook.com/faizal.karim.1253/" target="_blank"><i
+                            class="fa-brands fa-facebook fa-xl icon"></i></a>
+                    <a class="contact-links" href="https://www.linkedin.com/in/md-faizal-karim-720160217/"
+                        target="_blank"><i class="fa-brands fa-linkedin fa-xl icon"></i></a>
+                    <a class="contact-links" href="https://github.com/FaizalKarim280280" target="_blank"><i
+                            class="fa-brands fa-github fa-xl icon"></i></a>
+                    <a class="contact-links"
+                        href="https://drive.google.com/drive/u/1/folders/1Z1svz05l6qJjuqTO9Fe0Eg7YTCFEeG0H"
+                        target="_blank"><i class="fa-solid fa-file fa-xl icon"></i></a>
                 </div>
 
             </div>
 
-            <div class="col" style="padding-left: 50px">
-                <p style="padding-top: 20px; text-align: justify"> Hi! I am <strong>Md Faizal Karim. </strong></p>
+            <div class="col-md-8 mt-4">
+                <p style="text-align: justify"> Hi! I am <strong>Md Faizal Karim. </strong></p>
 
-                <p style = "text-align: justify">I am a 2nd year Computer Science and Engineering student studying at
-                    <u><a class = "college-link" target="_blank" href ="https://www.iiit.ac.in/">International Institute of Information Technology, Hyderabad.</a></u>
+                <p style="text-align: justify">I am a 2nd year Computer Science and Engineering student studying at
+                    <u><a class="college-link" target="_blank" href="https://www.iiit.ac.in/">International
+                            Institute of
+                            Information Technology, Hyderabad.</a></u>
                 </p>
 
-                <p style="text-align: justify">I am interested in Deep Learning, Robotics and Creative coding. I also have some experience working with Unity for Game Development.</p>
-
-                <p style="text-align: justify">One of the things that fascinate me a lot are Space Exploration and Aviation. 
-                    Recent developments in space exploration motivate me to do something better and contribute to the world.
+                <p style="text-align: justify">Currently, I am working as an Undergraduate Researcher at <u><a class="college-link" href="https://robotics.iiit.ac.in/"
+                    target="_blank">Robotics Research Center, IIIT Hyderabad.</a></u
                 </p>
+
+                <p style="text-align: justify">I am interested in Deep Learning, Robotics and Creative coding. I
+                    also
+                    have some experience working with Unity for Game Development.</p>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container px-4">
+        <h1 class="display-5 mt-4 fw-bold">Education</h1>
+        <hr>
+
+        <div class="my-5">
+            <div class="row g-5">
+                <div class="col-md-2 col-sm-3 col-xs-4">
+                    <div class="text-center">
+                        <img class="img-fluid rounded-3" src="Images/iiith.png" alt="Profile Pic"
+                            style="width: 150px; height: 150px; min-width: 100px;">
+                    </div>
+                    <p class="text-center fw-bold">2022 - present</p>
+
+                </div>
+
+                <div class="col-md-2 col-sm-3 col-xs-4">
+                    <div class="text-center">
+                        <img class="img-fluid rounded-3" src="Images/nits.png" alt="Profile Pic"
+                            style="width: 150px; height: 150px; min-width: 100px;">
+                    </div>
+                    <p class="text-center fw-bold">2020 - 2022</p>
+
+                </div>
+
+                <div class="col-md-2 col-sm-3 col-xs-4">
+                    <div class="text-center">
+                        <img class="img-fluid rounded-3" src="Images/dbs.jpeg" alt="Profile Pic"
+                            style="width: 150px; height: 150px; min-width: 100px;">
+                    </div>
+                    <p class="text-center fw-bold">2008 - 2020</p>
+
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="my-info" id="Experience">
-        <h1 class = "display-5" style="margin-right: 10%">Experience</h1>
+    <div class="container px-4">
+        <h1 class="display-5 mt-4 fw-bold">Experience</h1>
         <hr>
-        <div class="experience" style="margin-top: 20px">
-            <ul>
+        <ul>
 
-                <li> Research Intern under <u><a class = "college-link" href="http://cs.nits.ac.in/partha/" target="_blank">Dr. Partha Pakray</a></u>.&nbsp;
-                    Worked on Speech-to-Text translation of Assamese to English. </li>
-                <li> 1st prize winner in Megathon 2022 - &nbsp;annual hackathon of IIIT Hyderabad. </li>
-                <li> Best Project from East zone in Anveshan 2022 - &nbsp;annual Student Research Convention, held at AMET Chennai.</li>
-                <li> 2nd prize winner in Data Strata 2021 - &nbsp;annual data science hackathon of NIT Silchar.</li>
-            </ul>
-        </div>
+            <li> Research Intern under <u><a class="college-link" href="http://cs.nits.ac.in/partha/"
+                        target="_blank">Dr. Partha Pakray</a></u>.&nbsp;
+                Worked on Speech-to-Text translation of Assamese to English. </li>
+            <li> 1st prize winner in Megathon 2022 - &nbsp;annual hackathon of IIIT Hyderabad. </li>
+            <li> Best Project from East zone in Anveshan 2022 - &nbsp;annual Student Research Convention, held
+                at
+                AMET Chennai.</li>
+            <li> 2nd prize winner in Data Strata 2021 - &nbsp;annual data science hackathon of NIT Silchar.</li>
+        </ul>
+
     </div>
 
-    <div class="my-info" id="Project">
-        <h1 class = "display-5" style="margin-right: 10%">Projects</h1>
+    <div class="container px-4">
+
+        <h1 class="display-5 mt-4 fw-bold">Projects</h1>
         <hr>
 
         <div class="project row" style="margin-top: 20px">
 
-            <h4><a class="project-link" href="https://github.com/FaizalKarim280280/Roadment" target="_blank">RoadMent</a></h4>
+            <h4><a class="project-link" href="https://github.com/FaizalKarim280280/Roadment"
+                    target="_blank">RoadMent</a></h4>
             <div class="col-sm-auto">
                 <img class="img-fluid project-pics" src="Images/rs.gif" alt="RoadMent image">
             </div>
 
             <div class="col" style="margin-top: 10px">
-                <p class="project-desc" style="text-align: justify"> <b>RoadMent</b> is an end-to-end platform for segmentation of roads from satellite images.
-                    This is a project based on segmenting out roads from satellite images. We have used the U-Net architecture for the model,
-                    coupled with dice coefficient loss for loss function and IoU score and dice coefficient as metrics.
-                    <br/><br/>After model training, we got a training IoU score of 0.497 and a validation IoU score of 0.415.
+                <p class="project-desc" style="text-align: justify"> <b>RoadMent</b> is an end-to-end platform for
+                    segmentation of roads from satellite images.
+                    This is a project based on segmenting out roads from satellite images. We have used the U-Net
+                    architecture for the model,
+                    coupled with dice coefficient loss for loss function and IoU score and dice coefficient as
+                    metrics.
+                    <br /><br />After model training, we got a training IoU score of 0.497 and a validation IoU
+                    score of
+                    0.415.
                     Finally, the model was integrated on a website using the Flask API. &nbsp;
                     <a href="https://github.com/FaizalKarim280280/Roadment"><b>[Code]</b></a>
                 </p>
@@ -107,17 +152,22 @@
 
         <div class="project row" style="margin-top: 50px">
 
-            <h4><a class="project-link" href="https://github.com/FaizalKarim280280/Clean-Dirty-Road-Classifier" target="_blank">
-                Clean/Dirty Road Classification</a></h4>
+            <h4><a class="project-link" href="https://github.com/FaizalKarim280280/Clean-Dirty-Road-Classifier"
+                    target="_blank">
+                    Clean/Dirty Road Classification</a></h4>
             <div class="col-sm-auto">
-                <img class="project-pics img-fluid" src="Images/clean_results.gif" alt="RoadMent image" style="height: 200px">
+                <img class="project-pics img-fluid" src="Images/clean_results.gif" alt="RoadMent image"
+                    style="height: 200px">
             </div>
 
             <div class="col" style="margin-top: 10px">
-                <p class="project-desc" style="text-align: justify">This is a project based on ConvNets used to identify whether a road is clean or dirty.
-                    We have used <b>MobileNet</b> as our base architecture and the weights are based on imagenet. We have used web scraping techniques
+                <p class="project-desc" style="text-align: justify">This is a project based on ConvNets used to
+                    identify
+                    whether a road is clean or dirty.
+                    We have used <b>MobileNet</b> as our base architecture and the weights are based on imagenet. We
+                    have used web scraping techniques
                     to download 238 images of both clean and dirty roads.
-                    <br/><br/>We achieved a training accuracy of 97.1% and validation accuracy of 91.6%. &nbsp;
+                    <br /><br />We achieved a training accuracy of 97.1% and validation accuracy of 91.6%. &nbsp;
                     <a href="https://github.com/FaizalKarim280280/Clean-Dirty-Road-Classifier"><b>[Code]</b></a>
                 </p>
             </div>
@@ -125,39 +175,51 @@
 
         <div class="project row" style="margin-top: 50px">
 
-            <h4><a class="project-link" href="https://github.com/FaizalKarim280280/Clean-Dirty-Road-Classifier" target="_blank">Flood Segmentation</a></h4>
+            <h4><a class="project-link" href="https://github.com/FaizalKarim280280/Clean-Dirty-Road-Classifier"
+                    target="_blank">Flood Segmentation</a></h4>
             <div class="col-sm-auto">
-                <img class="project-pics img-fluid" src="Images/flood_pred.gif" alt="RoadMent image" style ="width: 200px">
+                <img class="project-pics img-fluid" src="Images/flood_pred.gif" alt="RoadMent image"
+                    style="width: 200px">
             </div>
 
             <div class="col" style="margin-top: 10px">
-                <p class="project-desc" style="text-align: justify">The aim of this project was to build a deep learning model which will identify and segment flooded areas in aerial images.
-                    For this project, we have built our own custom dataset from Google Images. The dataset contains 290 aerial images of several flooded and their respective masks.
+                <p class="project-desc" style="text-align: justify">The aim of this project was to build a deep
+                    learning
+                    model which will identify and segment flooded areas in aerial images.
+                    For this project, we have built our own custom dataset from Google Images. The dataset contains
+                    290
+                    aerial images of several flooded and their respective masks.
                     Both the masks and the images are 224x224 in resolution and are present in .png format.
-                    <br/><br/>After training for 15 epochs, we obtained a training iou score of 0.79 and validation iou score of 0.71. &nbsp;
+                    <br /><br />After training for 15 epochs, we obtained a training iou score of 0.79 and
+                    validation
+                    iou score of 0.71. &nbsp;
                     <a href="https://github.com/FaizalKarim280280/Clean-Dirty-Road-Classifier"><b>[Code]</b></a>
                 </p>
             </div>
         </div>
+
     </div>
 
-    <div class="my-info" id="Contact">
-        <h1 class = "display-5" style="margin-right: 10%">Contact</h1>
+    <div class="container px-4">
+        <h1 class="display-5 mt-4 fw-bold">Contact</h1>
         <hr>
-        <p> Mail: <a class="college-link" href="mailto: md.faizal@research.iiit.ac.in" target="_blank">md.faizal@research.iiit.ac.in</a><br/>
+        <p> Mail: <a class="college-link" href="mailto: md.faizal@research.iiit.ac.in"
+                target="_blank">md.faizal@research.iiit.ac.in</a><br />
             Address: IIIT Hyderabad, Gachibowli, Hyderabad, Telangana - 500032.
         </p>
 
+
     </div>
 
-    <footer class="footer bg-light text-center text-lg-start"">
 
-        <div class="text-center">
-          Updated Dec, 2022
+    <footer class="footer bg-dark text-center text-lg-start text-light">
+        <div class=" text-center">
+        Updated Dec, 2022
+
         </div>
     </footer>
 
-    <!-- <div style="margin-bottom: 50px"> </div> -->
+
 
 
 </body>
