@@ -1,17 +1,16 @@
-
 /* body {
     background: #fbfaff;
 } */
 
 
-.navbar-top{
+.navbar-top {
     border-radius: 5px;
     /*margin-left: 25%;*/
     /*margin-right: 10%;*/
     margin-top: 10px;
 }
 
-.my-info{
+.my-info {
     padding-left: 6px;
     padding-top: 6px;
     font-size: 18px;
@@ -21,24 +20,26 @@
     margin-right: 10%;
 }
 
-.nav-item{
+.nav-item {
     font-size: 25px;
     margin-right: 30px;
 }
+
 .display-5 {
-    padding-top:30px;
+    padding-top: 30px;
     /*padding-left: 0px;*/
 }
 
-.display-6{
+.display-6 {
     padding-top: 30px;
 }
 
-.college-link{
+.college-link {
     color: rgba(41, 41, 50, 0.7);
     text-decoration: none;
 }
-.college-link:hover{
+
+.college-link:hover {
     text-decoration: underline;
     color: rgb(34, 37, 45);
 }
@@ -50,14 +51,15 @@
     background-color: rgba(196, 196, 196, 0.75);
 } */
 
-li{
+li {
     padding: 3px;
 }
-h1{
+
+h1 {
     color: black;
 }
 
-.edu-pic{
+.edu-pic {
     width: 150px;
     height: 1500px;
 }
@@ -67,7 +69,7 @@ h1{
     height: 100%;
 }
 
-.profile{
+.profile {
     float: left;
 }
 
@@ -75,9 +77,11 @@ h1{
     margin-left: 10%;
     margin-top: 10%;
 }
+
 .contact-links {
     color: #4b83e5;
 }
+
 .icon {
     padding: 5px
 }
@@ -96,4 +100,18 @@ h1{
 .footer {
     font-family: 'Public Sans', sans-serif;
     font-size: 15px;
+}
+
+.college-logo {
+    width: 50%;
+    /* height: 30%; */
+}
+
+.my-container {
+    width: 50%;
+    margin-top: 5%;
+}
+
+.my-font {
+    font-family: 'Raleway';
 }
