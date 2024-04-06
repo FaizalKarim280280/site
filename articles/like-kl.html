@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Maximing Likelihood = Minimizing KL</title>
+    <link rel="icon" href="Images/falcon_heavy.png">
+    <link rel="stylesheet" href="CSS/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.0/mdb.min.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300&family=Montserrat:wght@500;600&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+
+    <div class="container" style="width:50%; margin-top: 3%;">
+        <h1>Maximzing Likelihood is equivalent to minimizing KL Divergence</h1>
+        <hr>
+
+        <h2 class="mt-5">Some revisions</h2>
+        <p style="text-align: justify;">
+            Before we get into the proof, let's quickly revise the necessary definitions and get familiar with the
+            notions which will be used later in the proof.
+        </p>
+        <h5>1. Maximum Likelihood Estimation</h5>
+        <p style="text-align: justify;">
+            MLE or Maximum Lilelihood Estimation is a technique to find the values of the parameters of a distribution
+            that maximized the likelihood of observing the data that we have. Formally, it is described as,
+            \[
+            \begin{aligned}
+            \theta_{MLE} & = \underset{\theta}{\text{argmax}} \ P(X|\theta) \\
+            & = \underset{\theta}{\text{argmax}} \prod_{i} \ P(x_{i}| \theta) \
+            [\text{assuming} \ x_{i} \ \text{are i.i.d}]
+            \end{aligned}
+            \]
+            With the above assumption we have a simple formulation for implementing MLE, but is it enough?
+        </p>
+
+        <h5>2. KL Divergence</h5>
+        <p style="text-align: justify;">KL Divergence is a widely used divergance measure in Statistics and Machine
+            Learning. A divergence measure is
+            a way to
+            quantify how one probability distribution differs from another. It is defined as,
+            \[
+            \begin{aligned}
+            D_{KL}(P||Q) & = \mathbb{E}_{x \sim P} \left[\log \frac{P(x)}{Q(x)} \right] \\
+            & = \int_{x \sim \text{dom}(P)} P(x) \log \frac{P(x)}{Q(x)} dx
+            \end{aligned}
+            \]
+
+            It is important to note that the above is not a <em>valid distance metric</em>. One of the conditions for a
+            function to be a valid distance
+            matric is that it needs to be symmetric, i.e, \(f(x, y) = f(y, x) \ \forall x, y \in dom(f) \). Clearly, KL
+            divergence is not symmetric and hence
+            not a valid distance metric.
+        </p>
+
+        <h5>3. Law of Large Numbers (LLN)</h5>
+        <p style="text-align: justify;">
+            The Law of Large Numbers is one of the most important theorems behind all Machine Learning algorithms. It
+            states that as the number
+            of observations increases, the sample mean of the observed values converges to the population mean with high
+            probability. Given \( n \)
+            i.i.d random variables \(X_{1}, X_{2}, ....., X_{n} \), LLN states that,
+            \[
+            \lim_{n\to\infty} \frac{1}{n} \sum_{i=1}^{n} X_{i} = \mu
+            \]
+            where \(mu \) is the true (population) mean. We will use LLN to complete an essential step in the proof.
+        </p>
+
+        <hr style="width: 30%; margin:auto">
+
+        <h2 class="mt-5">Proof</h2>
+        <p style="text-align: justify;">
+            Let \(p \) be a proxy distribution and \(p_{\theta} \) be our parametrized distribution. We start by
+            evaluating the \(D_{KL}(p || p_{\theta}) \) term.
+            \[
+            \begin{aligned}
+            \underset{\theta}{\text{argmin}} \ D_{KL}(p || p_{\theta}) &= \underset{\theta}{\text{argmin}} \
+            \mathbb{E}_{x \sim p} \left[\log \frac{p(x)}{p_{\theta}(x)} \right] \\
+            &= \underset{\theta}{\text{argmin}} \ \mathbb{E}_{x \sim p}[\log p(x)] - \mathbb{E}_{x \sim p}[\log
+            p_{\theta}(x)] \\
+            &= \underset{\theta}{\text{argmin}} \ -\mathbb{E}_{x \sim p}[\log p_{\theta}(x)] \ \ \ \
+            (\text{since p doesn't depend on} \ \theta) \\
+            &= \underset{\theta}{\text{argmax}} \ \mathbb{E}_{x \sim p}[\log p_{\theta}(x)] \\
+            &= \underset{\theta}{\text{argmax}} \ \mathbb{E}_{x \sim p} \left[\prod_{i}^{n} \log p_{\theta}(x_{i})
+            \right] \\
+            &= \underset{\theta}{\text{argmax}} \ \mathbb{E}_{x \sim p} \left[\log \sum_{i}^{n} p_{\theta}(x_{i})
+            \right] \\
+
+            \end{aligned}
+            \]
+
+            Now, using the Law of Large Numbers, we get the following
+
+            \[
+            \begin{aligned}
+            \underset{\theta}{\text{argmax}} \ \mathbb{E}_{x \sim p} \left[\log \sum_{i}^{n} p_{\theta}(x_{i}) \right]
+            &=
+            \underset{\theta}{\text{argmax}} \lim_{n\to\infty} \frac{1}{n} \left[\log \sum_{i}^{n}
+            p_{\theta}(x_{i})\right] \\
+
+            &= \underset{\theta}{\text{argmax}} \log p_{\theta}(x) \\
+            \end{aligned}
+            \]
+
+            Since \(\log \) is a monotonically increasing function, \(\text{argmax} \log(f) \) = \(\text{argmax} (f) \
+            \forall \ f: \mathbb{R^m} \rightarrow \mathbb{R^n} \). Hence,
+
+            \[
+            \boxed{
+            \underset{\theta}{\text{argmin}} \ D_{KL}(p || p_{\theta}) = \underset{\theta}{\text{argmax}} \log
+            p_{\theta}(x)}
+            \]
+        </p>
+        <hr style="width: 30%; margin:auto">
+
+        <h2 class="mt-5">Why is it Good?</h2>
+        <p style="text-align: justify;">
+            We know that MLE is a consistent estimator of the true parameters of the underlying data distribution.
+            Similarly, minimizing KL divergence ensures that the estimated model distribution converges to the true data
+            distribution as the amount of data increases, which is a desirable property for statistical inference. Also, KL divergence provides a clear measure of the difference between two probability distributions.
+        </p>
+
+        <h2 class="mt-5">References</h2>
+
+
+    </div>>
+
+    <footer class="footer bg-dark text-center text-lg-start text-light py-2 mt-5">
+        <div class=" text-center">
+            Updated Dec, 2023
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
